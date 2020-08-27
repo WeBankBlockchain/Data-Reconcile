@@ -1,16 +1,59 @@
-# Compiled class file
+### common ###
+log/
+src/main/resources
+src/test/resources
+
+### gradle ###
+.gradle/
+build
+dist/
+
+## eclipse ##
+.classpath
+.project
+.settings
+bin/
+out/
+conf/
+
+## integration test files
+nodes/
+src/integration-test/resources/
+build_chain.sh
+
+### STS ###
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+###  Compiled class file ### 
 *.class
 
-# Log file
+###  Log file ### 
 *.log
 
-# BlueJ files
+###  BlueJ files ### 
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+###  Mobile Tools for Java (J2ME) ### 
 .mtj.tmp/
 
-# Package Files #
+###  Package Files ### 
 *.jar
 *.war
 *.nar
@@ -19,5 +62,7 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+###  virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml ### 
 hs_err_pid*
+
+### repo ###
