@@ -30,7 +30,8 @@ bc-reconcile组件提供了基于区块链数据对账的功能，可以一键�
 ### 1.下载代码：
 
 ```
-git clone https://gitee.com/graysonzhang/bc-reconcile.git
+git clone https://github.com/WeBankBlockchain/bc-reconcile.git
+git checkout dev
 ```
 ### 2. 项目打包
 
