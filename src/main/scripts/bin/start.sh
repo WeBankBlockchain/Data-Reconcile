@@ -1,2 +1,2 @@
 #!/bin/bash
-java -jar bc-reconcile*.jar
+java -jar WeBankBlockchain-Data-Reconcile*.jar

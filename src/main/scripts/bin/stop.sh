@@ -1,2 +1,2 @@
 #!/bin/bash
-ps -ef|grep bc-reconcile |grep -v grep| awk '{print $2}'|xargs kill -9
+ps -ef|grep WeBankBlockchain-Data-Reconcile |grep -v grep| awk '{print $2}'|xargs kill -9
