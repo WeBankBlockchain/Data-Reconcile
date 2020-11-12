@@ -36,10 +36,6 @@ WeBankBlockchain-Data-Reconcile是一款基于区块链的对账组件，提供�
 - [提问和提交BUG](https://github.com/WeBankBlockchain/Data-Reconcile/issues)。
 - 如果发现代码存在安全漏洞，请在[这里](https://security.webank.com)上报。
 
-## 加入我们的社区
-
-FISCO BCOS开源社区是国内活跃的开源社区，社区长期为机构和个人开发者提供各类支持与帮助。已有来自各行业的数千名技术爱好者在研究和使用FISCO BCOS。如您对FISCO BCOS开源技术及应用感兴趣，欢迎加入社区获得更多支持与帮助。
-
 
 ![](https://media.githubusercontent.com/media/FISCO-BCOS/LargeFiles/master/images/QR_image.png)
 
