@@ -3,6 +3,7 @@ log/
 src/main/resources
 src/test/resources
 
+
 ### mac ###
 .DS_Store
 

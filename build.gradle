@@ -1,0 +1,84 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+	id 'eclipse'
+	id 'idea'
+}
+
+group = 'com.webank'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/"}
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url "https://dl.bintray.com/ethereum/maven/" }
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	compile group: 'commons-net', name: 'commons-net', version: "3.6"
+	compile group: 'org.apache.commons', name:"commons-pool2",version:"2.4.2"
+	compile 'com.google.guava:guava:26.0-jre'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.1'
+	compile "com.fasterxml.jackson.core:jackson-core:2.9.6"
+	compile "com.fasterxml.jackson.core:jackson-databind:2.9.6"
+	compile "com.fasterxml.jackson.core:jackson-annotations:2.9.6"
+	compile 'mysql:mysql-connector-java'
+	compile 'cn.hutool:hutool-all:4.4.5'
+	testCompile 'junit:junit:4.12'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+sourceSets {
+	main {
+	java {
+	    srcDir 'src/main/java'
+	}
+        resources  {
+            srcDir 'src/main/resources'
+        }       
+	}
+}
+
+bootJar {
+	destinationDir file('dist')
+	archiveName project.name + "-" + version + '.jar'
+
+	exclude '*.xml'
+	exclude '**/*.properties'
+
+    doLast {
+	copy {
+		from configurations.runtime
+		into 'dist/lib'
+	}
+	copy {
+            from file('src/main/resources')
+            into 'dist/config/'
+        }
+        copy {
+            from file('src/main/scripts/bin')
+            into 'dist'
+        }
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
