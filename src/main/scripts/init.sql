@@ -1,0 +1,20 @@
+CREATE TABLE `task_info` (
+  `pk_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `node_id` varchar(255) NOT NULL DEFAULT '""',
+  `task_id` varchar(255) NOT NULL DEFAULT '""',
+  `status` tinyint(4) NOT NULL,
+  `triggered` tinyint(4) NOT NULL,
+  `business_file_name` varchar(255) DEFAULT NULL,
+  `business_file_path` varchar(255) DEFAULT NULL,
+  `bc_file_path` varchar(255) DEFAULT NULL,
+  `result_file_path` varchar(255) DEFAULT NULL,
+  `last_execute_starttime` timestamp NULL DEFAULT NULL,
+  `last_execute_endtime` timestamp NULL DEFAULT NULL,
+  `data_range_begintime` timestamp NULL DEFAULT NULL,
+  `data_range_endtime` timestamp NULL DEFAULT NULL,
+  `retry_count` int(11) DEFAULT 0,
+  `createtime` timestamp NOT NULL DEFAULT '2019-05-21 00:00:00',
+  `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`pk_id`),
+  UNIQUE KEY `task_id` (`task_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
