@@ -37,9 +37,6 @@ WeBankBlockchain-Data-Reconcile是一款基于区块链的对账组件，提供�
 - 如果发现代码存在安全漏洞，请在[这里](https://security.webank.com)上报。
 
 
-![](https://media.githubusercontent.com/media/FISCO-BCOS/LargeFiles/master/images/QR_image.png)
-
-
 ## License
 ![license](http://img.shields.io/badge/license-Apache%20v2-blue.svg)
 
