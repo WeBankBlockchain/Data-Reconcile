@@ -64,19 +64,24 @@ bootJar {
 	exclude '**/*.properties'
 
     doLast {
-	copy {
-		from configurations.runtime
-		into 'dist/lib'
-	}
-	copy {
+		copy {
+			from configurations.runtime
+			into 'dist/lib'
+		}
+		copy {
             from file('src/main/resources')
             into 'dist/config/'
         }
-        copy {
+		copy {
             from file('src/main/scripts/bin')
             into 'dist'
         }
 	}
+}
+
+clean {
+	println "delete ${projectDir}/dist"
+	delete "${projectDir}/dist"
 }
 
 test {

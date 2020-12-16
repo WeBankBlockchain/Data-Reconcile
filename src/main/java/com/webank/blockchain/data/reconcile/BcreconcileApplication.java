@@ -23,11 +23,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 		"file:./config/application.properties",
 		"file:./config/datasource.properties",
 		"file:./config/reconcile.properties",
-		"file:./config/ftp.properties",
+		"file:./config/filetransfer.properties",
 		"classpath:application.properties",
 		"classpath:datasource.properties",
 		"classpath:reconcile.properties",
-		"classpath:ftp.properties",
+		"classpath:filetransfer.properties",
 }, encoding = "utf-8",ignoreResourceNotFound = true)
 @SpringBootApplication
 @EnableTransactionManagement
