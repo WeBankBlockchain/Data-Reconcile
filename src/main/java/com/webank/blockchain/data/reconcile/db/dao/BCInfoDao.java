@@ -58,7 +58,7 @@ public class BCInfoDao {
     @PostConstruct
     private void sqlInit(){
         bcDataQuerySql = reconcileConfig.getReconcileQuerySql();
-        bcDataCountSql = "select count(1) from " + StringUtils.substringAfterOfIgnoreCase(bcDataQuerySql,"from");
+        bcDataCountSql = reconcileConfig.getReconcileCountSql();
     }
 
     public Page<Map<String,Object>> pageQueryBCData(Date beginTime, Date endTime, int pageNo, int pageSize){

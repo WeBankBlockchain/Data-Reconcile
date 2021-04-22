@@ -74,6 +74,9 @@ public class ReconcileConfig {
     @Value("${reconcile.bc.reconcileQuerySql}")
     private String reconcileQuerySql;
 
+    @Value("${reconcile.bc.reconcileCountSql}")
+    private String reconcileCountSql;
+
     @Value("${reconcile.bc.QueryTimeField}")
     private String reconcileQueryTimeField;
 

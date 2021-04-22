@@ -66,7 +66,7 @@ public class DefaultReconcileFileObtainHandler extends ReconcileFileObtainHandle
             String time = LocalDate.now().minusDays(reconcileConfig.getDaysTimeRange()).toString();
             fileName = reconcileConfig.getBusinessName() + "_" + time + "." + reconcileConfig.getFileType();
             Date startDate = DateUtil.parse(time);
-            Date endDate = DateUtil.offsetDay(startDate, 1);
+            Date endDate = DateUtil.offsetDay(startDate, reconcileConfig.getDaysTimeRange());
 
             taskInfo.setDataRangeBeginTime(startDate);
             taskInfo.setDataRangeEndTime(endDate);

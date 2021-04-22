@@ -100,7 +100,7 @@ public class ReconcileTaskHandler implements Handler {
         taskInfo.setLastExecuteEndTime(new Date());
         taskService.changeReconcileTaskStatus(taskInfo.getPkId(),
                 TaskStatus.EXECUTING.getStatus(),taskInfo.getStatus(),taskInfo.getLastExecuteEndTime());
-        log.error("the reconcile task execute success,the task id=" + taskInfo.getTaskId());
+        log.info("the reconcile task execute success,the task id=" + taskInfo.getTaskId());
         // file consistency processing
         TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronizationAdapter() {
             @Override
